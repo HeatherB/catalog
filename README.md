@@ -15,7 +15,7 @@ node -v
 npm -v
 
 Clone the Repository
-`git clone https://github.com/HeatherB/card_catalog.git`
+`git clone https://github.com/HeatherB/catalog.git`
 
 Cd into your repository and install the dependencies
 `npm install`
