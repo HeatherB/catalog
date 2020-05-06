@@ -1,20 +1,12 @@
+$green: #3F602B;
+$white: #ffffff;
+$darkblue: #282c34;
+
 .App {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
-  background-color: #282c34;
+  background-color: $darkblue;
   min-height: 10vh;
   display: flex;
   flex-direction: column;
@@ -23,20 +15,9 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+main,section {
+  width: 100%;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 .wrapper {
   width: 100%;
   max-width: 1600px;
@@ -44,7 +25,68 @@
   padding: 1rem;
   box-sizing: border-box;
 }
+.sleeve {
+  background: rgb(255,255,255);
+  background: rgba(255,255,255,0.7);
+  margin:0 auto;
+  padding: 1rem;
+  box-sizing: border-box;
+  max-width:400px;
+  width:100%;
+  border-radius: 3px;
+}
 section {
-  border-top:2px solid #3F602B;
+  border-top:2px solid $green;
 }
 
+h1 {
+  font-size: 1rem;
+}
+h1,h2 {
+  font-size: 1rem;
+  font-family: Georgia,Times,"Times New Roman",serif;
+}
+
+#search_section {
+  background: url(wallpaper.jpg) top left no-repeat $green;
+  background-size: 100%;
+}
+#list_section {
+  background: $darkblue;
+}
+.heading {
+  background: $green;
+  color: $white;
+  box-sizing: border-box;
+  padding: 1rem;
+  min-width: 300px;
+  max-width: 60%;
+  width: 100%;
+  margin: 0 auto 1rem;
+  border-radius: 3px;
+}
+
+.BTT {
+  position: fixed;
+  right: 0;
+  bottom: 2rem;
+  background: $green;
+  padding: 8px 0; 
+  box-sizing:border-box;
+  cursor: pointer;
+  img {
+    transform: rotate(90deg);
+    filter: invert(1);
+    width: 40px;
+    height: 20px;
+  }
+}
+
+@media all and (min-width:768px) {
+  h1 {
+    font-size:3.5rem;
+  }
+  #list_section {
+    background: url(bg_tile.png) top center repeat $darkblue; 
+  }
+}

@@ -2,6 +2,7 @@
 import React, { Component } from "react"; /* this allows to declare Component instead of React.Component */
 import axios from "axios"; /* axios is an http request client */
 import { catalog } from './Catalog.module.scss'; /* this provides the styles attached to .catalog */
+import arrow from './arrow.svg'; /* pull in an icon to use in a back to top button */
 
 class CardCatalog extends Component { /* we decalre our own component named NameSearch that inherits from the built-in Component */
      constructor() {
@@ -56,12 +57,21 @@ class CardCatalog extends Component { /* we decalre our own component named Name
           this.setState({ prevY: y }); /* save the watched elements position */
      }
 
+     scrollToTop() { /* a function to scroll the user back to top of the window */
+          window.scrollTo({
+            top: 0, /* how far from top of window */
+            behavior: "smooth" /* we want to scroll to feel smooth */
+          });
+     }
+
 
      render() { /* display on the page */
           const loadingCSS = { /* react inline stlying, can attach these styles to the markup below with style={constName} */
                height: "100px",
-               margin: "30px",
-               color: "#4A7023"
+               margin: "30px auto",
+               width: "100%",
+               color: "#FF6500",
+               fontWeight: "bold"
           };
 
           const loadingTextCSS = { display: this.state.loading ? "block" : "none" };
@@ -83,6 +93,9 @@ class CardCatalog extends Component { /* we decalre our own component named Name
                     </ul>
                     <div ref={loadingRef => (this.loadingRef = loadingRef)} style={loadingCSS}> 
                          <span style={loadingTextCSS}>Loading . . .</span>
+                    </div>
+                    <div className="BTT" onClick={() => this.scrollToTop()}>
+                         <img src={arrow} alt="back to top" />
                     </div>
                </div>
           );

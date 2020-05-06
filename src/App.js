@@ -14,22 +14,26 @@ function App() {
         </div>
       </header>
       <main>
-      <section>
+      <section id="search_section">
         <div className="wrapper">
-          <h2>Search for a Card by Name</h2>
-          <p>Enter the name of a card you are looking for.</p>
-          <p>You may search an exact or partial name.</p>
-          <p>You may also search more than one name at a time. Use a pipe symbol to represent 'or' in your search.</p>
-          <p>Use a comma to represent 'and' in your search.</p>
-          <p>(fan or cat) Example: fan|cat</p>
-          <p>(fan and cat) Example: fan,cat</p>
+          <div className="sleeve">
+            <h2>Search for a Card by Name</h2>
+            <p>Enter the name of a card you are looking for.</p>
+            <p>You may search an exact or partial name.</p>
+            <p>You may also search more than one name at a time. Use a pipe symbol to represent 'or' in your search.</p>
+            <p>Use a comma to represent 'and' in your search.</p>
+            <p>(fan or cat) Example: fan|cat</p>
+            <p>(fan and cat) Example: fan,cat</p>
+          </div>
           <NameSearch />
         </div>
       </section>
-        <section>
+        <section id="list_section">
           <div className="wrapper">
-            <h2>View All Cards</h2>
-            <p>You may scroll the list of cards below. More cards will load as you scroll.</p>
+            <div className="heading">
+              <h2>View All Cards</h2>
+              <p>You may scroll the list of cards below. More cards will load as you scroll.</p>
+            </div>
             <CardCatalog />
           </div>
         </section>
