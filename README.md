@@ -34,7 +34,7 @@ When ready to deploy to production, create an optimized build in the build folde
 
 ## Other Notes
 
-## Axios?
+## Axios
 Axios is a promis-based HTTP client for the browser and Node.js
 https://github.com/axios/axios
 
