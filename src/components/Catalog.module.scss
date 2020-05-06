@@ -1,0 +1,112 @@
+.catalog {
+     .has {
+          .no_results {
+               display: none;
+          }
+     }
+
+     ul {
+          margin: 0 auto;
+          padding: 0;
+          display: -webkit-box;           /* OLD - iOS 6-, Safari 3.1-6 */
+          display: -moz-box;              /* OLD - Firefox 19- (doesn't work very well) */
+          display: -ms-flexbox;           /* TWEENER - IE 10 */
+          display: -webkit-flex;          /* NEW - Chrome */
+          display: flex;                  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          li {
+               width: 100%;
+               max-width: 300px;
+               margin:10px;
+               list-style-type: none;
+               border: 2px dashed #000000;
+          }
+          div {
+               width: 100%;
+               margin:0 auto;
+               padding: 0 0.5rem 0.5rem;
+               box-sizing: border-box;
+          }
+          img {
+               width:100%;
+               max-width: 100%;
+               margin: 0 auto;
+          }
+          span {
+               display: block;
+               margin-bottom: 5px;
+               box-sizing:border-box;
+               padding: 0 10px;
+               text-align:left;
+          }
+     }
+     .hasNot {
+          .no_results {
+               display: block;
+          }
+          ul {
+               display:none;
+          }
+     }
+
+     form {
+          display: block;
+          border-radius: 3px;
+          border: 3px solid #4A7023;
+          background: #9acd32;
+          max-width: 300px;
+          margin: 2rem auto 1rem;
+          padding: 1rem;
+          box-sizing: border-box;
+          label {
+               font-weight:bold;
+               color:#000000;
+               font-size: 21px;
+          }
+     }
+
+     input[type="text"] {
+          display:block;
+          border: 1px solid #000000;
+          box-shadow: inset 0px 0px 10px rgba(0,0,0,0.15);
+          background: #dedede;
+          text-align:center;
+          color:#000000;
+          font-size:14px;
+          box-sizing: border-box;
+          padding: 5px;
+          line-height:1.75;
+          width: 175px;
+          height: 45px;
+          margin:0.5rem auto;
+          cursor:pointer;
+     }
+
+     input[type="submit"] {
+          border-radius: 5px;
+          display:block;
+          border: 3px solid #4A7023;
+          box-shadow: 0px 0px 10px rgba(0,0,0,0.15);
+          background: rgb(156,186,127);
+          background: rgba(156,186,127,0.2);
+          text-align:center;
+          color:#000000;
+          font-size:14px;
+          text-transform: uppercase;
+          font-weight: bold;
+          box-sizing: border-box;
+          padding: 5px 34px;
+          line-height:1.75;
+          width: 175px;
+          height: 45px;
+          margin:0 auto;
+          transition:500ms background;
+          cursor:pointer;
+          &:hover {
+               background: #4A7023;
+          }
+     }
+
+}
