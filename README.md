@@ -2,32 +2,32 @@
 
 A code sample to connect with the Elder Scrolls Legends API. Results are shown in a responsive grid format. Results return in grous of 20 cards and the user should experience an nfiniate scroll effect. Cards may also be searched by Name. 
 
-The project is built with React.
-Dependencies:
-Node >= 8.10
-npm >= 5.6
+The project is built with React.  
+Dependencies:  
+Node >= 8.10  
+npm >= 5.6  
 
-Node can downloaded from the Node website, npm will install with it.
+Node can downloaded from the Node website, npm will install with it.  
 https://nodejs.org/en/
 
-You can check your versions with
-node -v
-npm -v
+You can check your versions with  
+node -v  
+npm -v  
 
-Clone the Repository
+Clone the Repository  
 `git clone https://github.com/HeatherB/catalog.git`
 
-Cd into your repository and install the dependencies
+Cd into your repository and install the dependencies  
 `npm install`
 
-Run the project 
+Run the project   
 `npm start`
 
-The site should load in your default browser, at this url 
+The site should load in your default browser, at this url   
 http://localhost:3000/
 
 
-When ready to deploy to production, create an optimized build in the build folder
+When ready to deploy to production, create an optimized build in the build folder  
 `npm run build`
 
 
@@ -42,7 +42,7 @@ Axios is popularly used in React, and is similar to the Fetch API. However, Axio
 
 To use Axios, we need to install it and save it to our package.json
 In the terminal, navigate to the project folder and enter this command
-### `npm install axios --save`
+ `npm install axios --save`
 
 
 
@@ -50,7 +50,7 @@ In the terminal, navigate to the project folder and enter this command
 install node-sass to provide support for SASS (sassy css)
 To use Node-Sass, we need to install it and save it to our package.json
 In the terminal, navigate to the project folder and enter this command
-### `npm install node-sass --save`
+ `npm install node-sass --save`
 
 When we build the app, required vendor prefixes will be automatically added. The vendor prefixes used are determined by the 'browserslist' on the package.json
 
