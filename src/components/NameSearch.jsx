@@ -11,6 +11,8 @@ class NameSearch extends Component { /* we decalre our own component named NameS
       cards: [] /* an array to hold the search results */
     };
 
+
+    this.baseState = this.state;
     this.handleChange = this.handleChange.bind(this); /* attach the object we are currently working with and access this by a simpler name */
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -40,6 +42,11 @@ class NameSearch extends Component { /* we decalre our own component named NameS
     event.preventDefault(); /* using a form submit to pass this data over - dont actually submit the form to any action endpoint */
   }
 
+  clearResults = () => {
+    this.setState(this.baseState);
+    this.setState({ noData: false });
+  }
+
   render() { /* display on the page */
     const loadingCSS = { /* react inline stlying, can attach these styles to the markup below with style={constName} */
          height: "100px",
@@ -59,6 +66,7 @@ class NameSearch extends Component { /* we decalre our own component named NameS
             <input type="text" value={this.state.value} onChange={this.handleChange} />
           </label>
           <input type="submit" value="Search" />
+          <input type="button" value="Clear" onClick={this.clearResults} />
         </form>
           <p style={showErrMessage}>No results match your search. Please try again with another name.</p>
           <ul style={showFoundCards}>
